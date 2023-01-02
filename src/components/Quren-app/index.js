@@ -159,13 +159,13 @@ export default function QurenApp() {
                     {ShuraInfo &&(
                     <tr>
                     
-                        <td className='p-3 border-2' key={ShuraInfo.id}>{ShuraInfo.id}</td>
-                        <td className='p-3 border-2' key={ShuraInfo.id}>{ShuraInfo.name_arabic}</td>
-                        <td className='p-3 border-2' key={ShuraInfo.id}>{ShuraInfo.name_simple}</td>
-                        <td className='p-3 border-2' key={ShuraInfo.id}>{ShuraInfo.translated_name.name}</td>
-                        <td className='p-3 border-2' key={ShuraInfo.id}>{ShuraInfo.revelation_place}</td>
-                        <td className='p-3 border-2' key={ShuraInfo.id}>{ShuraInfo.revelation_order}</td>
-                        <td className='p-3 border-2' key={ShuraInfo.id}>{ShuraInfo.verses_count}</td> 
+                        <td className='p-3 border-2' >{ShuraInfo.id}</td>
+                        <td className='p-3 border-2' >{ShuraInfo.name_arabic}</td>
+                        <td className='p-3 border-2' >{ShuraInfo.name_simple}</td>
+                        <td className='p-3 border-2' >{ShuraInfo.translated_name.name}</td>
+                        <td className='p-3 border-2' >{ShuraInfo.revelation_place}</td>
+                        <td className='p-3 border-2' >{ShuraInfo.revelation_order}</td>
+                        <td className='p-3 border-2' >{ShuraInfo.verses_count}</td> 
                     
                     </tr>
                     )}
@@ -176,9 +176,9 @@ export default function QurenApp() {
             <div className='w-[1000px] overflow-hidden overflow-y-scroll'>
             {
                 FullContent.map(content=>(
-                    <div className='p-2 '>
-                    <p key={content.id} className='text-right p-1'> {content.text_uthmani} {content.verse_number}</p>
-                    <p key={content.id} className='p-1'> {content.verse_number} {content.translations[0].text}</p>
+                    <div key={content.id} className='p-2 '>
+                    <p  className='text-right p-1'> {content.text_uthmani} {content.verse_number}</p>
+                    <p  className='p-1'> {content.verse_number} {content.translations[0].text}</p>
                     </div>
                 ))
             }
